@@ -58,6 +58,10 @@ class _HomeScreeenState extends State<HomeScreen>{
       _frontController.clear();
       _backController.clear();
       Navigator.pop(context); // Close the dialog
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Please complete all fields')),
+      );
     }
   }
 
